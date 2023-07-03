@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "test performance of different globby versions",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index",
     "test": "npm run start"
@@ -18,12 +19,9 @@
   },
   "homepage": "https://github.com/ernscht/globby-performace-test#readme",
   "devDependencies": {
-    "sync-cpuprofiler": "1.1.3",
-    "system-sleep": "1.3.7",
-    "globby-7": "npm:globby@7.1.1",
-    "globby-8": "npm:globby@8.0.2",
-    "globby-9": "npm:globby@9.2.0",
-    "globby-10": "npm:globby@10.0.2",
-    "globby-11": "npm:globby@11.1.0"
+    "globby-11": "npm:globby@11.1.0",
+    "globby-12": "npm:globby@12.2.0",
+    "globby-13": "npm:globby@13.2.1",
+    "sleep": "^6.3.0"
   }
 }

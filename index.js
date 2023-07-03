@@ -1,16 +1,12 @@
-// const cpuprofiler = require('sync-cpuprofiler');
+import {default as globby11} from "globby-11";
+import {globbySync as globby12} from "globby-12";
+import {globbySync as globby13} from "globby-13";
+import {run} from "./src/tasks/globby.sync.js";
 
 const testObjects = [
-	{ globby: require('globby-7'), version: '7.1.1' },
-	{ globby: require('globby-8'), version: '8.0.2' },
-	{ globby: require('globby-9'), version: '9.2.0' },
-	{ globby: require('globby-10'), version: '10.0.2' },
-	{ globby: require('globby-11'), version: '11.1.0' },
+	{ globby: globby11.sync, version: '11.1.0' },
+	{ globby: globby12, version: '12.2.0' },
+	{ globby: globby13 , version: '13.2.1' },
 ];
 
-const globbySync = require('./src/tasks/globby.sync');
-
-// create cpu profile (for chrome devtools)
-// cpuprofiler();
-
-globbySync.run(testObjects, 100);
+run(testObjects, 100);

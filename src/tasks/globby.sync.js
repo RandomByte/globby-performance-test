@@ -1,5 +1,5 @@
 'use strict';
-const sleep = require('system-sleep');
+import sleep from "sleep";
 
 function findFile(obj) {
 	const file = 'y/y.json';
@@ -9,7 +9,7 @@ function findFile(obj) {
 	obj.durations = obj.durations || [];
 
 	const timer1 = new Date();
-	obj.globby.sync(fileGlobs);
+	obj.globby(fileGlobs);
 	const timer2 = new Date();
 	const diff = timer2 - timer1;
 
@@ -33,10 +33,10 @@ function analyze(testObjects) {
 	console.log('.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.');
 }
 
-function run (testObjects, quantity = 10) {
+export function run (testObjects, quantity = 10) {
 	testObjects.forEach((obj, index) => {
 		findFile(obj);
-		sleep(500);
+		sleep.msleep(500);
 	});
 	if (quantity > 1) {
 		run(testObjects, --quantity);
@@ -44,7 +44,3 @@ function run (testObjects, quantity = 10) {
 		analyze(testObjects);
 	}
 }
-
-module.exports = {
-	run,
-};
