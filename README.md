@@ -18,7 +18,7 @@ npm start
 100 runs - node v18.16.1 - MacBook Pro M1 Max - macOS 13.14.1
 
 ```
-Duration: 7 - 25 ms | average: 16 ms (v: 11.1.0)
-Duration: 8 - 29 ms | average: 16 ms (v: 12.2.0)
-Duration: 9 - 22 ms | average: 15 ms (v: 13.2.1)
+Duration: 9 - 16 ms | average: 13 ms (v: 11.1.0)
+Duration: 7 - 16 ms | average: 13 ms (v: 12.2.0)
+Duration: 8 - 17 ms | average: 13 ms (v: 13.2.1)
 ```

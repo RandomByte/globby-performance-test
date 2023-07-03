@@ -1,5 +1,4 @@
 'use strict';
-import sleep from "sleep";
 
 function findFile(obj) {
 	const file = 'y/y.json';
@@ -36,11 +35,15 @@ function analyze(testObjects) {
 export function run (testObjects, quantity = 10) {
 	testObjects.forEach((obj, index) => {
 		findFile(obj);
-		sleep.msleep(500);
+		msleep(500);
 	});
 	if (quantity > 1) {
 		run(testObjects, --quantity);
 	} else {
 		analyze(testObjects);
 	}
+}
+
+function msleep(n) {
+	Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, n);
 }
